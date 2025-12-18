@@ -26,7 +26,7 @@ resource "random_id" "suffix" {
 }
 
 # Final VM name: if an existing VM with the same name is found, append the random
-# suffix so the resource can be created without colliding.
+# suffix so the resource can be created without duplicate.
 locals {
   vm_name_final = length(data.nutanix_virtual_machines_v2.existing.vms) > 0 ? "${var.vm_name}-${random_id.suffix[0].hex}" : var.vm_name
   vm_name_note  = length(data.nutanix_virtual_machines_v2.existing.vms) > 0 ? "Requested name '${var.vm_name}' already existed; created VM as '${var.vm_name}-${random_id.suffix[0].hex}'." : "Requested name '${var.vm_name}' was available and used as-is."
