@@ -1,4 +1,4 @@
-# Terraform Nutanix VM (example)
+# terraform_nutanix_duplicate_vm_names_suffix
 
 This repository contains a small Terraform configuration that demonstrates creating a Nutanix AHV virtual machine using the `nutanix` provider (v2.x). It includes a guest-customization (cloud-init) payload, a guard that detects duplicate VM names, and logic to append a short randomized suffix when a name collision is detected.
 
