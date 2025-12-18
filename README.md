@@ -12,7 +12,7 @@ Use this repo as a testing/demo workspace — do not commit secrets or credentia
 - If a VM with the requested name already exists in Prism Central, the config appends a short hex suffix (3 bytes -> 6 hex chars) to avoid collision and still create the VM.
 - Outputs the final VM name plus a short human-readable note explaining any name change.
 
-## Files
+## Contents
 
 - `main.tf` - primary Terraform configuration (data sources, VM resource, random id logic, locals).
 - `providers.tf` - provider configuration and required providers.
