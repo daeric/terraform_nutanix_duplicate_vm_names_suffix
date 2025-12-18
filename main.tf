@@ -82,5 +82,5 @@ resource "nutanix_virtual_machine_v2" "test" {
     }
   }
 
-    power_state = "OFF"
+    power_state = "ON"
   }
